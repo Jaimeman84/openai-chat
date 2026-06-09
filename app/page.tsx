@@ -166,7 +166,7 @@ export default function Home() {
       </main>
 
       {/* Input */}
-      <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3">
+      <footer className="sticky bottom-0 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3">
         <form onSubmit={sendMessage} className="flex gap-2 max-w-3xl mx-auto">
           <input
             type="text"
