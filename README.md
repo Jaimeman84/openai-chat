@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OpenAI Chat
 
-## Getting Started
+A streaming chat interface built with Next.js and the OpenAI API. Supports multiple models including GPT-4.1, GPT-4o, GPT-5, and the o-series reasoning models.
 
-First, run the development server:
+## Setup
+
+### 1. Add your OpenAI API key
+
+Create a `.env.local` file in the root of the project:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Or create it manually:
+
+```
+OPENAI_API_KEY=sk-...
+```
+
+> `.env.local` is excluded from git via `.gitignore` — never commit your API key.
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Streaming responses from the OpenAI API
+- Model selector (GPT-5, GPT-4.1, GPT-4o, o-series reasoning models)
+- Markdown rendering for assistant responses
+- Dark mode support
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Set the `OPENAI_API_KEY` environment variable in your Vercel project settings, then deploy:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
